@@ -1,0 +1,6 @@
+#!/bin/sh
+PREFERENCES_PLIST='/Library/Preferences/SystemConfiguration/preferences.plist'
+BACKUP_PLIST='/var/mobile/goagent-local/backup/preferences.plist.original'
+killall python
+rm -rf /tmp/goagent.pid
+cp $BACKUP_PLIST $PREFERENCES_PLIST 

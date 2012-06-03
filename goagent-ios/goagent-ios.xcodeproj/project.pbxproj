@@ -7,152 +7,191 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE980DE4157B3AB300C534E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DE3157B3AB300C534E9 /* UIKit.framework */; };
-		CE980DE6157B3AB300C534E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DE5157B3AB300C534E9 /* Foundation.framework */; };
-		CE980DE8157B3AB300C534E9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DE7157B3AB300C534E9 /* CoreGraphics.framework */; };
-		CE980DEE157B3AB300C534E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE980DEC157B3AB300C534E9 /* InfoPlist.strings */; };
-		CE980DF0157B3AB300C534E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE980DEF157B3AB300C534E9 /* main.m */; };
-		CE980DF4157B3AB300C534E9 /* GAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE980DF3157B3AB300C534E9 /* GAppDelegate.m */; };
-		CE980DFC157B3AB300C534E9 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DFB157B3AB300C534E9 /* SenTestingKit.framework */; };
-		CE980DFD157B3AB300C534E9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DE3157B3AB300C534E9 /* UIKit.framework */; };
-		CE980DFE157B3AB300C534E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE980DE5157B3AB300C534E9 /* Foundation.framework */; };
-		CE980E06157B3AB300C534E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE980E04157B3AB300C534E9 /* InfoPlist.strings */; };
-		CE980E09157B3AB300C534E9 /* goagent_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE980E08157B3AB300C534E9 /* goagent_iosTests.m */; };
+		CE0A6CFB157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CF7157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard */; };
+		CE0A6CFC157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CF9157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard */; };
+		CE0A6D01157B5C7200C46A20 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CFD157B5C7200C46A20 /* icon_57.png */; };
+		CE0A6D02157B5C7200C46A20 /* icon_72.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CFE157B5C7200C46A20 /* icon_72.png */; };
+		CE0A6D03157B5C7200C46A20 /* icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CFF157B5C7200C46A20 /* icon_114.png */; };
+		CE0A6D04157B5C7200C46A20 /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6D00157B5C7200C46A20 /* icon_144.png */; };
+		CE9128D3157B4171008C98B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128D2157B4171008C98B1 /* UIKit.framework */; };
+		CE9128D5157B4171008C98B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128D4157B4171008C98B1 /* Foundation.framework */; };
+		CE9128D7157B4171008C98B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128D6157B4171008C98B1 /* CoreGraphics.framework */; };
+		CE9128DD157B4171008C98B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9128DB157B4171008C98B1 /* InfoPlist.strings */; };
+		CE9128DF157B4171008C98B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9128DE157B4171008C98B1 /* main.m */; };
+		CE9128E3157B4171008C98B1 /* GAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9128E2157B4171008C98B1 /* GAppDelegate.m */; };
+		CE9128EC157B4171008C98B1 /* GViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9128EB157B4171008C98B1 /* GViewController.m */; };
+		CE9128F4157B4171008C98B1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128F3157B4171008C98B1 /* SenTestingKit.framework */; };
+		CE9128F5157B4171008C98B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128D2157B4171008C98B1 /* UIKit.framework */; };
+		CE9128F6157B4171008C98B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE9128D4157B4171008C98B1 /* Foundation.framework */; };
+		CE9128FE157B4171008C98B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE9128FC157B4171008C98B1 /* InfoPlist.strings */; };
+		CE912901157B4171008C98B1 /* goagent_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE912900157B4171008C98B1 /* goagent_iosTests.m */; };
+		CE912910157B43C2008C98B1 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CE91290F157B43C2008C98B1 /* settings.png */; };
+		CE912963157B483F008C98B1 /* GSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE912962157B483F008C98B1 /* GSettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CE980DFF157B3AB300C534E9 /* PBXContainerItemProxy */ = {
+		CE9128F7157B4171008C98B1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = CE980DD6157B3AB300C534E9 /* Project object */;
+			containerPortal = CE9128C5157B4171008C98B1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = CE980DDE157B3AB300C534E9;
+			remoteGlobalIDString = CE9128CD157B4171008C98B1;
 			remoteInfo = "goagent-ios";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CE980DDF157B3AB300C534E9 /* goagent-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goagent-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE980DE3157B3AB300C534E9 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		CE980DE5157B3AB300C534E9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		CE980DE7157B3AB300C534E9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		CE980DEB157B3AB300C534E9 /* goagent-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goagent-ios-Info.plist"; sourceTree = "<group>"; };
-		CE980DED157B3AB300C534E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CE980DEF157B3AB300C534E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CE980DF1157B3AB300C534E9 /* goagent-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goagent-ios-Prefix.pch"; sourceTree = "<group>"; };
-		CE980DF2157B3AB300C534E9 /* GAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAppDelegate.h; sourceTree = "<group>"; };
-		CE980DF3157B3AB300C534E9 /* GAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAppDelegate.m; sourceTree = "<group>"; };
-		CE980DFA157B3AB300C534E9 /* goagent-iosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goagent-iosTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE980DFB157B3AB300C534E9 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		CE980E03157B3AB300C534E9 /* goagent-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goagent-iosTests-Info.plist"; sourceTree = "<group>"; };
-		CE980E05157B3AB300C534E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		CE980E07157B3AB300C534E9 /* goagent_iosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goagent_iosTests.h; sourceTree = "<group>"; };
-		CE980E08157B3AB300C534E9 /* goagent_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goagent_iosTests.m; sourceTree = "<group>"; };
+		CE0A6CF8157B5B0C00C46A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		CE0A6CFA157B5B0C00C46A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		CE0A6CFD157B5C7200C46A20 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		CE0A6CFE157B5C7200C46A20 /* icon_72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_72.png; sourceTree = "<group>"; };
+		CE0A6CFF157B5C7200C46A20 /* icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_114.png; sourceTree = "<group>"; };
+		CE0A6D00157B5C7200C46A20 /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
+		CE9128CE157B4171008C98B1 /* goagent-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goagent-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9128D2157B4171008C98B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CE9128D4157B4171008C98B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CE9128D6157B4171008C98B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CE9128DA157B4171008C98B1 /* goagent-ios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goagent-ios-Info.plist"; sourceTree = "<group>"; };
+		CE9128DC157B4171008C98B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE9128DE157B4171008C98B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE9128E0157B4171008C98B1 /* goagent-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goagent-ios-Prefix.pch"; sourceTree = "<group>"; };
+		CE9128E1157B4171008C98B1 /* GAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GAppDelegate.h; sourceTree = "<group>"; };
+		CE9128E2157B4171008C98B1 /* GAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GAppDelegate.m; sourceTree = "<group>"; };
+		CE9128EA157B4171008C98B1 /* GViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GViewController.h; sourceTree = "<group>"; };
+		CE9128EB157B4171008C98B1 /* GViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GViewController.m; sourceTree = "<group>"; };
+		CE9128F2157B4171008C98B1 /* goagent-iosTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "goagent-iosTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE9128F3157B4171008C98B1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		CE9128FB157B4171008C98B1 /* goagent-iosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goagent-iosTests-Info.plist"; sourceTree = "<group>"; };
+		CE9128FD157B4171008C98B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CE9128FF157B4171008C98B1 /* goagent_iosTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = goagent_iosTests.h; sourceTree = "<group>"; };
+		CE912900157B4171008C98B1 /* goagent_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goagent_iosTests.m; sourceTree = "<group>"; };
+		CE91290F157B43C2008C98B1 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
+		CE912961157B483F008C98B1 /* GSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSettingViewController.h; sourceTree = "<group>"; };
+		CE912962157B483F008C98B1 /* GSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		CE980DDC157B3AB300C534E9 /* Frameworks */ = {
+		CE9128CB157B4171008C98B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980DE4157B3AB300C534E9 /* UIKit.framework in Frameworks */,
-				CE980DE6157B3AB300C534E9 /* Foundation.framework in Frameworks */,
-				CE980DE8157B3AB300C534E9 /* CoreGraphics.framework in Frameworks */,
+				CE9128D3157B4171008C98B1 /* UIKit.framework in Frameworks */,
+				CE9128D5157B4171008C98B1 /* Foundation.framework in Frameworks */,
+				CE9128D7157B4171008C98B1 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE980DF6157B3AB300C534E9 /* Frameworks */ = {
+		CE9128EE157B4171008C98B1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980DFC157B3AB300C534E9 /* SenTestingKit.framework in Frameworks */,
-				CE980DFD157B3AB300C534E9 /* UIKit.framework in Frameworks */,
-				CE980DFE157B3AB300C534E9 /* Foundation.framework in Frameworks */,
+				CE9128F4157B4171008C98B1 /* SenTestingKit.framework in Frameworks */,
+				CE9128F5157B4171008C98B1 /* UIKit.framework in Frameworks */,
+				CE9128F6157B4171008C98B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE980DD4157B3AB300C534E9 = {
+		CE9128C3157B4171008C98B1 = {
 			isa = PBXGroup;
 			children = (
-				CE980DE9157B3AB300C534E9 /* goagent-ios */,
-				CE980E01157B3AB300C534E9 /* goagent-iosTests */,
-				CE980DE2157B3AB300C534E9 /* Frameworks */,
-				CE980DE0157B3AB300C534E9 /* Products */,
+				CE9128D8157B4171008C98B1 /* goagent-ios */,
+				CE9128F9157B4171008C98B1 /* goagent-iosTests */,
+				CE9128D1157B4171008C98B1 /* Frameworks */,
+				CE9128CF157B4171008C98B1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		CE980DE0157B3AB300C534E9 /* Products */ = {
+		CE9128CF157B4171008C98B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CE980DDF157B3AB300C534E9 /* goagent-ios.app */,
-				CE980DFA157B3AB300C534E9 /* goagent-iosTests.octest */,
+				CE9128CE157B4171008C98B1 /* goagent-ios.app */,
+				CE9128F2157B4171008C98B1 /* goagent-iosTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		CE980DE2157B3AB300C534E9 /* Frameworks */ = {
+		CE9128D1157B4171008C98B1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE980DE3157B3AB300C534E9 /* UIKit.framework */,
-				CE980DE5157B3AB300C534E9 /* Foundation.framework */,
-				CE980DE7157B3AB300C534E9 /* CoreGraphics.framework */,
-				CE980DFB157B3AB300C534E9 /* SenTestingKit.framework */,
+				CE9128D2157B4171008C98B1 /* UIKit.framework */,
+				CE9128D4157B4171008C98B1 /* Foundation.framework */,
+				CE9128D6157B4171008C98B1 /* CoreGraphics.framework */,
+				CE9128F3157B4171008C98B1 /* SenTestingKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CE980DE9157B3AB300C534E9 /* goagent-ios */ = {
+		CE9128D8157B4171008C98B1 /* goagent-ios */ = {
 			isa = PBXGroup;
 			children = (
-				CE980DF2157B3AB300C534E9 /* GAppDelegate.h */,
-				CE980DF3157B3AB300C534E9 /* GAppDelegate.m */,
-				CE980DEA157B3AB300C534E9 /* Supporting Files */,
+				CE91290E157B4382008C98B1 /* resources */,
+				CE9128E1157B4171008C98B1 /* GAppDelegate.h */,
+				CE9128E2157B4171008C98B1 /* GAppDelegate.m */,
+				CE912961157B483F008C98B1 /* GSettingViewController.h */,
+				CE912962157B483F008C98B1 /* GSettingViewController.m */,
+				CE9128EA157B4171008C98B1 /* GViewController.h */,
+				CE9128EB157B4171008C98B1 /* GViewController.m */,
+				CE9128D9157B4171008C98B1 /* Supporting Files */,
 			);
 			path = "goagent-ios";
 			sourceTree = "<group>";
 		};
-		CE980DEA157B3AB300C534E9 /* Supporting Files */ = {
+		CE9128D9157B4171008C98B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE980DEB157B3AB300C534E9 /* goagent-ios-Info.plist */,
-				CE980DEC157B3AB300C534E9 /* InfoPlist.strings */,
-				CE980DEF157B3AB300C534E9 /* main.m */,
-				CE980DF1157B3AB300C534E9 /* goagent-ios-Prefix.pch */,
+				CE9128DA157B4171008C98B1 /* goagent-ios-Info.plist */,
+				CE9128DB157B4171008C98B1 /* InfoPlist.strings */,
+				CE9128DE157B4171008C98B1 /* main.m */,
+				CE9128E0157B4171008C98B1 /* goagent-ios-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CE980E01157B3AB300C534E9 /* goagent-iosTests */ = {
+		CE9128F9157B4171008C98B1 /* goagent-iosTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE980E07157B3AB300C534E9 /* goagent_iosTests.h */,
-				CE980E08157B3AB300C534E9 /* goagent_iosTests.m */,
-				CE980E02157B3AB300C534E9 /* Supporting Files */,
+				CE9128FF157B4171008C98B1 /* goagent_iosTests.h */,
+				CE912900157B4171008C98B1 /* goagent_iosTests.m */,
+				CE9128FA157B4171008C98B1 /* Supporting Files */,
 			);
 			path = "goagent-iosTests";
 			sourceTree = "<group>";
 		};
-		CE980E02157B3AB300C534E9 /* Supporting Files */ = {
+		CE9128FA157B4171008C98B1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE980E03157B3AB300C534E9 /* goagent-iosTests-Info.plist */,
-				CE980E04157B3AB300C534E9 /* InfoPlist.strings */,
+				CE9128FB157B4171008C98B1 /* goagent-iosTests-Info.plist */,
+				CE9128FC157B4171008C98B1 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE91290E157B4382008C98B1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				CE0A6CFD157B5C7200C46A20 /* icon_57.png */,
+				CE0A6CFE157B5C7200C46A20 /* icon_72.png */,
+				CE0A6CFF157B5C7200C46A20 /* icon_114.png */,
+				CE0A6D00157B5C7200C46A20 /* icon_144.png */,
+				CE0A6CF7157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard */,
+				CE0A6CF9157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard */,
+				CE91290F157B43C2008C98B1 /* settings.png */,
+			);
+			name = resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CE980DDE157B3AB300C534E9 /* goagent-ios */ = {
+		CE9128CD157B4171008C98B1 /* goagent-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE980E0C157B3AB300C534E9 /* Build configuration list for PBXNativeTarget "goagent-ios" */;
+			buildConfigurationList = CE912904157B4171008C98B1 /* Build configuration list for PBXNativeTarget "goagent-ios" */;
 			buildPhases = (
-				CE980DDB157B3AB300C534E9 /* Sources */,
-				CE980DDC157B3AB300C534E9 /* Frameworks */,
-				CE980DDD157B3AB300C534E9 /* Resources */,
+				CE9128CA157B4171008C98B1 /* Sources */,
+				CE9128CB157B4171008C98B1 /* Frameworks */,
+				CE9128CC157B4171008C98B1 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -160,76 +199,83 @@
 			);
 			name = "goagent-ios";
 			productName = "goagent-ios";
-			productReference = CE980DDF157B3AB300C534E9 /* goagent-ios.app */;
+			productReference = CE9128CE157B4171008C98B1 /* goagent-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CE980DF9157B3AB300C534E9 /* goagent-iosTests */ = {
+		CE9128F1157B4171008C98B1 /* goagent-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CE980E0F157B3AB300C534E9 /* Build configuration list for PBXNativeTarget "goagent-iosTests" */;
+			buildConfigurationList = CE912907157B4171008C98B1 /* Build configuration list for PBXNativeTarget "goagent-iosTests" */;
 			buildPhases = (
-				CE980DF5157B3AB300C534E9 /* Sources */,
-				CE980DF6157B3AB300C534E9 /* Frameworks */,
-				CE980DF7157B3AB300C534E9 /* Resources */,
-				CE980DF8157B3AB300C534E9 /* ShellScript */,
+				CE9128ED157B4171008C98B1 /* Sources */,
+				CE9128EE157B4171008C98B1 /* Frameworks */,
+				CE9128EF157B4171008C98B1 /* Resources */,
+				CE9128F0157B4171008C98B1 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				CE980E00157B3AB300C534E9 /* PBXTargetDependency */,
+				CE9128F8157B4171008C98B1 /* PBXTargetDependency */,
 			);
 			name = "goagent-iosTests";
 			productName = "goagent-iosTests";
-			productReference = CE980DFA157B3AB300C534E9 /* goagent-iosTests.octest */;
+			productReference = CE9128F2157B4171008C98B1 /* goagent-iosTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		CE980DD6157B3AB300C534E9 /* Project object */ = {
+		CE9128C5157B4171008C98B1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = G;
 				LastUpgradeCheck = 0430;
 			};
-			buildConfigurationList = CE980DD9157B3AB300C534E9 /* Build configuration list for PBXProject "goagent-ios" */;
+			buildConfigurationList = CE9128C8157B4171008C98B1 /* Build configuration list for PBXProject "goagent-ios" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = CE980DD4157B3AB300C534E9;
-			productRefGroup = CE980DE0157B3AB300C534E9 /* Products */;
+			mainGroup = CE9128C3157B4171008C98B1;
+			productRefGroup = CE9128CF157B4171008C98B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CE980DDE157B3AB300C534E9 /* goagent-ios */,
-				CE980DF9157B3AB300C534E9 /* goagent-iosTests */,
+				CE9128CD157B4171008C98B1 /* goagent-ios */,
+				CE9128F1157B4171008C98B1 /* goagent-iosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		CE980DDD157B3AB300C534E9 /* Resources */ = {
+		CE9128CC157B4171008C98B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980DEE157B3AB300C534E9 /* InfoPlist.strings in Resources */,
+				CE9128DD157B4171008C98B1 /* InfoPlist.strings in Resources */,
+				CE912910157B43C2008C98B1 /* settings.png in Resources */,
+				CE0A6CFB157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard in Resources */,
+				CE0A6CFC157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard in Resources */,
+				CE0A6D01157B5C7200C46A20 /* icon_57.png in Resources */,
+				CE0A6D02157B5C7200C46A20 /* icon_72.png in Resources */,
+				CE0A6D03157B5C7200C46A20 /* icon_114.png in Resources */,
+				CE0A6D04157B5C7200C46A20 /* icon_144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE980DF7157B3AB300C534E9 /* Resources */ = {
+		CE9128EF157B4171008C98B1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980E06157B3AB300C534E9 /* InfoPlist.strings in Resources */,
+				CE9128FE157B4171008C98B1 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CE980DF8157B3AB300C534E9 /* ShellScript */ = {
+		CE9128F0157B4171008C98B1 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,46 +291,64 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		CE980DDB157B3AB300C534E9 /* Sources */ = {
+		CE9128CA157B4171008C98B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980DF0157B3AB300C534E9 /* main.m in Sources */,
-				CE980DF4157B3AB300C534E9 /* GAppDelegate.m in Sources */,
+				CE9128DF157B4171008C98B1 /* main.m in Sources */,
+				CE9128E3157B4171008C98B1 /* GAppDelegate.m in Sources */,
+				CE9128EC157B4171008C98B1 /* GViewController.m in Sources */,
+				CE912963157B483F008C98B1 /* GSettingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE980DF5157B3AB300C534E9 /* Sources */ = {
+		CE9128ED157B4171008C98B1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE980E09157B3AB300C534E9 /* goagent_iosTests.m in Sources */,
+				CE912901157B4171008C98B1 /* goagent_iosTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CE980E00157B3AB300C534E9 /* PBXTargetDependency */ = {
+		CE9128F8157B4171008C98B1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CE980DDE157B3AB300C534E9 /* goagent-ios */;
-			targetProxy = CE980DFF157B3AB300C534E9 /* PBXContainerItemProxy */;
+			target = CE9128CD157B4171008C98B1 /* goagent-ios */;
+			targetProxy = CE9128F7157B4171008C98B1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CE980DEC157B3AB300C534E9 /* InfoPlist.strings */ = {
+		CE0A6CF7157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE980DED157B3AB300C534E9 /* en */,
+				CE0A6CF8157B5B0C00C46A20 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		CE0A6CF9157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0A6CFA157B5B0C00C46A20 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CE9128DB157B4171008C98B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE9128DC157B4171008C98B1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		CE980E04157B3AB300C534E9 /* InfoPlist.strings */ = {
+		CE9128FC157B4171008C98B1 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				CE980E05157B3AB300C534E9 /* en */,
+				CE9128FD157B4171008C98B1 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -292,7 +356,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		CE980E0A157B3AB300C534E9 /* Debug */ = {
+		CE912902157B4171008C98B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -312,13 +376,13 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		CE980E0B157B3AB300C534E9 /* Release */ = {
+		CE912903157B4171008C98B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -331,7 +395,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -339,29 +403,35 @@
 			};
 			name = Release;
 		};
-		CE980E0D157B3AB300C534E9 /* Debug */ = {
+		CE912905157B4171008C98B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-ios/goagent-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		CE980E0E157B3AB300C534E9 /* Release */ = {
+		CE912906157B4171008C98B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-ios/goagent-ios-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		CE980E10157B3AB300C534E9 /* Debug */ = {
+		CE912908157B4171008C98B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goagent-ios.app/goagent-ios";
@@ -373,12 +443,13 @@
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-iosTests/goagent-iosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
-		CE980E11157B3AB300C534E9 /* Release */ = {
+		CE912909157B4171008C98B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goagent-ios.app/goagent-ios";
@@ -390,6 +461,7 @@
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-iosTests/goagent-iosTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -398,32 +470,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CE980DD9157B3AB300C534E9 /* Build configuration list for PBXProject "goagent-ios" */ = {
+		CE9128C8157B4171008C98B1 /* Build configuration list for PBXProject "goagent-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE980E0A157B3AB300C534E9 /* Debug */,
-				CE980E0B157B3AB300C534E9 /* Release */,
+				CE912902157B4171008C98B1 /* Debug */,
+				CE912903157B4171008C98B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
-		CE980E0C157B3AB300C534E9 /* Build configuration list for PBXNativeTarget "goagent-ios" */ = {
+		CE912904157B4171008C98B1 /* Build configuration list for PBXNativeTarget "goagent-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE980E0D157B3AB300C534E9 /* Debug */,
-				CE980E0E157B3AB300C534E9 /* Release */,
+				CE912905157B4171008C98B1 /* Debug */,
+				CE912906157B4171008C98B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
-		CE980E0F157B3AB300C534E9 /* Build configuration list for PBXNativeTarget "goagent-iosTests" */ = {
+		CE912907157B4171008C98B1 /* Build configuration list for PBXNativeTarget "goagent-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CE980E10157B3AB300C534E9 /* Debug */,
-				CE980E11157B3AB300C534E9 /* Release */,
+				CE912908157B4171008C98B1 /* Debug */,
+				CE912909157B4171008C98B1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = CE980DD6157B3AB300C534E9 /* Project object */;
+	rootObject = CE9128C5157B4171008C98B1 /* Project object */;
 }

@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE980DDE157B3AB300C534E9"
+               BlueprintIdentifier = "CE9128CD157B4171008C98B1"
                BuildableName = "goagent-ios.app"
                BlueprintName = "goagent-ios"
                ReferencedContainer = "container:goagent-ios.xcodeproj">
@@ -31,7 +31,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CE980DF9157B3AB300C534E9"
+               BlueprintIdentifier = "CE9128F1157B4171008C98B1"
                BuildableName = "goagent-iosTests.octest"
                BlueprintName = "goagent-iosTests"
                ReferencedContainer = "container:goagent-ios.xcodeproj">
@@ -41,7 +41,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE980DDE157B3AB300C534E9"
+            BlueprintIdentifier = "CE9128CD157B4171008C98B1"
             BuildableName = "goagent-ios.app"
             BlueprintName = "goagent-ios"
             ReferencedContainer = "container:goagent-ios.xcodeproj">
@@ -60,7 +60,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE980DDE157B3AB300C534E9"
+            BlueprintIdentifier = "CE9128CD157B4171008C98B1"
             BuildableName = "goagent-ios.app"
             BlueprintName = "goagent-ios"
             ReferencedContainer = "container:goagent-ios.xcodeproj">
@@ -78,7 +78,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CE980DDE157B3AB300C534E9"
+            BlueprintIdentifier = "CE9128CD157B4171008C98B1"
             BuildableName = "goagent-ios.app"
             BlueprintName = "goagent-ios"
             ReferencedContainer = "container:goagent-ios.xcodeproj">

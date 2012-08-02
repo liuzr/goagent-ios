@@ -1,4 +1,4 @@
-export THEOS_DEVICE_IP=192.168.3.101
+export THEOS_DEVICE_IP=192.168.3.103
 
 include theos/makefiles/common.mk
 

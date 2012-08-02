@@ -1,4 +1,6 @@
 #import "BBWeeAppController-Protocol.h"
+#import <stdlib.h>
+#import <sys/stat.h>
 
 static NSBundle *_goagentwidgetWeeAppBundle = nil;
 
@@ -30,6 +32,26 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
 
 - (void)loadFullView {
 	// Add subviews to _backgroundView (or _view) here.
+    UIButton *toggleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+	struct stat st;
+    NSString *btnTitle = nil;
+    int action;
+	if(stat("/tmp/goagent.pid",&st)==0)
+    {    
+        btnTitle =  @"Stop GoAgent";
+        action = 0;
+    }
+    else 
+    {
+        btnTitle = @"Start GoAgent";
+        action = 1;
+    }
+        
+    [toggleBtn setTitle:btnTitle  forState:UIControlStateNormal];
+    toggleBtn.tag = action;
+    [toggleBtn addTarget:self action:@selector(runGoAgent:) forControlEvents:UIControlEventTouchDown];
+    toggleBtn.frame = CGRectMake(0, 0, 140, 40);
+	[_view addSubview:toggleBtn];
 }
 
 - (void)loadPlaceholderView {
@@ -60,4 +82,16 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
 	return 71.f;
 }
 
+- (void)runGoAgent:(id)sender {
+    UIButton* btn = (UIButton*)sender;
+    NSLog(@"button.tag = %d",btn.tag);
+    if (btn.tag == 1)
+    {
+        system("sh /var/mobile/goagent-local/start_goagent.sh");
+    }
+    else 
+    {
+        system("sh /var/mobile/goagent-local/stop_goagent.sh");
+    }
+}
 @end

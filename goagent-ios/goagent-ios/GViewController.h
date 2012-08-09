@@ -9,15 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface GViewController : UIViewController
-{
-    IBOutlet UINavigationItem *titleBar;
-    IBOutlet UIBarItem *startBtn;
-    IBOutlet UIBarItem *settingBtn;
-}
 
-@property (nonatomic,retain) UINavigationItem *titleBar;
-@property (nonatomic,retain) UIBarItem *startBtn;
-@property (nonatomic,retain) UIBarItem *settingBtn;
+@property (nonatomic,strong) IBOutlet UINavigationItem *titleBar;
+@property (nonatomic,strong) IBOutlet UIBarItem *startBtn;
+@property (nonatomic,strong) IBOutlet UIBarItem *settingBtn;
+@property (nonatomic,strong) UIViewController* settingViewController;
 
 -(IBAction)performStartAction:(id)sender;
 -(IBAction)performSettingAction:(id)sender;

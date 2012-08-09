@@ -7,6 +7,7 @@
 //
 
 #import "GViewController.h"
+#import "GSettingViewController.h"
 
 @interface GViewController ()
 
@@ -14,16 +15,22 @@
 
 @implementation GViewController
 
-@synthesize titleBar,startBtn,settingBtn;
+@synthesize titleBar,startBtn,settingBtn,settingViewController;
 
-- (void)viewDidLoad
+
+-(void)awakeFromNib
 {
-    [super viewDidLoad];
     NSFileManager *fileMgr = [NSFileManager defaultManager];
     NSString* pid_path=@"/tmp/goagent.pid";
     if ([fileMgr fileExistsAtPath:pid_path]) {
         [startBtn setTitle:@"Stop"];
     }
+    
+    settingViewController = [[self storyboard] instantiateViewControllerWithIdentifier:@"SettingViewController"];
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
 }
 
 - (void)viewDidUnload
@@ -49,6 +56,7 @@
 -(IBAction)performSettingAction:(id)sender
 {
     NSLog(@"setting button pushed");
+    [self presentModalViewController:settingViewController animated:NO];
 }
 
 @end

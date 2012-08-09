@@ -7,8 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "3rdparty/iniparser/iniparser.h"
 
-@interface GSettingViewController : UIViewController
+@interface SettingItem : NSObject
+
+@property (nonatomic,copy) NSString* settingKey;
+@property (nonatomic,copy) NSString* settingValue;
+@property (nonatomic,copy) NSString* settingDescription;
+
+-(id)initWithKey:(NSString*)key Value:(NSString*)value Description:(NSString*)description;
+@end
+
+@interface GSettingViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,UITextFieldDelegate>
+
+@property (nonatomic,retain) NSMutableArray* settingSections;
+@property (nonatomic,retain) NSMutableDictionary* settingDic;
+@property (nonatomic,strong) IBOutlet UITableView* settingTableView;
+@property (nonatomic,strong) IBOutlet UINavigationItem *titleBar;
+@property (nonatomic,strong) IBOutlet UIBarItem *BackBtn;
 
 -(IBAction)performBackAction:(id)sender;
 

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBF04DA715D3D4F70000BD41 /* goagent-local in Resources */ = {isa = PBXBuildFile; fileRef = BBF04DA615D3D4F70000BD41 /* goagent-local */; };
+		BBF04DA915D3D62C0000BD41 /* python in Resources */ = {isa = PBXBuildFile; fileRef = BBF04DA815D3D62C0000BD41 /* python */; };
+		BBF04DB315D3DC180000BD41 /* dictionary.c in Sources */ = {isa = PBXBuildFile; fileRef = BBF04DAD15D3DC180000BD41 /* dictionary.c */; };
+		BBF04DB415D3DC180000BD41 /* iniparser.c in Sources */ = {isa = PBXBuildFile; fileRef = BBF04DAF15D3DC180000BD41 /* iniparser.c */; };
 		CE0A6CFB157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CF7157B5B0C00C46A20 /* MainStoryboard_iPad.storyboard */; };
 		CE0A6CFC157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CF9157B5B0C00C46A20 /* MainStoryboard_iPhone.storyboard */; };
 		CE0A6D01157B5C7200C46A20 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0A6CFD157B5C7200C46A20 /* icon_57.png */; };
@@ -40,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BBF04DA615D3D4F70000BD41 /* goagent-local */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "goagent-local"; path = "../../goagent-local"; sourceTree = "<group>"; };
+		BBF04DA815D3D62C0000BD41 /* python */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python; path = ../../python; sourceTree = "<group>"; };
+		BBF04DAD15D3DC180000BD41 /* dictionary.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = dictionary.c; sourceTree = "<group>"; };
+		BBF04DAE15D3DC180000BD41 /* dictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dictionary.h; sourceTree = "<group>"; };
+		BBF04DAF15D3DC180000BD41 /* iniparser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = iniparser.c; sourceTree = "<group>"; };
+		BBF04DB015D3DC180000BD41 /* iniparser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iniparser.h; sourceTree = "<group>"; };
 		CE0A6CF8157B5B0C00C46A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		CE0A6CFA157B5B0C00C46A20 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		CE0A6CFD157B5C7200C46A20 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
@@ -93,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BBF04DAB15D3DC180000BD41 /* iniparser */ = {
+			isa = PBXGroup;
+			children = (
+				BBF04DAD15D3DC180000BD41 /* dictionary.c */,
+				BBF04DAE15D3DC180000BD41 /* dictionary.h */,
+				BBF04DAF15D3DC180000BD41 /* iniparser.c */,
+				BBF04DB015D3DC180000BD41 /* iniparser.h */,
+			);
+			name = iniparser;
+			path = 3rdparty/iniparser;
+			sourceTree = "<group>";
+		};
 		CE9128C3157B4171008C98B1 = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +148,14 @@
 		CE9128D8157B4171008C98B1 /* goagent-ios */ = {
 			isa = PBXGroup;
 			children = (
-				CE91290E157B4382008C98B1 /* resources */,
+				BBF04DAB15D3DC180000BD41 /* iniparser */,
 				CE9128E1157B4171008C98B1 /* GAppDelegate.h */,
 				CE9128E2157B4171008C98B1 /* GAppDelegate.m */,
 				CE912961157B483F008C98B1 /* GSettingViewController.h */,
 				CE912962157B483F008C98B1 /* GSettingViewController.m */,
 				CE9128EA157B4171008C98B1 /* GViewController.h */,
 				CE9128EB157B4171008C98B1 /* GViewController.m */,
+				CE91290E157B4382008C98B1 /* resources */,
 				CE9128D9157B4171008C98B1 /* Supporting Files */,
 			);
 			path = "goagent-ios";
@@ -171,6 +194,8 @@
 		CE91290E157B4382008C98B1 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				BBF04DA815D3D62C0000BD41 /* python */,
+				BBF04DA615D3D4F70000BD41 /* goagent-local */,
 				CE0A6CFD157B5C7200C46A20 /* icon_57.png */,
 				CE0A6CFE157B5C7200C46A20 /* icon_72.png */,
 				CE0A6CFF157B5C7200C46A20 /* icon_114.png */,
@@ -261,6 +286,8 @@
 				CE0A6D02157B5C7200C46A20 /* icon_72.png in Resources */,
 				CE0A6D03157B5C7200C46A20 /* icon_114.png in Resources */,
 				CE0A6D04157B5C7200C46A20 /* icon_144.png in Resources */,
+				BBF04DA715D3D4F70000BD41 /* goagent-local in Resources */,
+				BBF04DA915D3D62C0000BD41 /* python in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +326,8 @@
 				CE9128E3157B4171008C98B1 /* GAppDelegate.m in Sources */,
 				CE9128EC157B4171008C98B1 /* GViewController.m in Sources */,
 				CE912963157B483F008C98B1 /* GSettingViewController.m in Sources */,
+				BBF04DB315D3DC180000BD41 /* dictionary.c in Sources */,
+				BBF04DB415D3DC180000BD41 /* iniparser.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +390,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -387,7 +416,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_ARC = NO;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -406,6 +435,7 @@
 		CE912905157B4171008C98B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-ios/goagent-ios-Info.plist";
@@ -420,6 +450,7 @@
 		CE912906157B4171008C98B1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goagent-ios/goagent-ios-Prefix.pch";
 				INFOPLIST_FILE = "goagent-ios/goagent-ios-Info.plist";

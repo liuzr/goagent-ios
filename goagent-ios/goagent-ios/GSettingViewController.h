@@ -25,7 +25,9 @@
 @property (nonatomic,strong) IBOutlet UITableView* settingTableView;
 @property (nonatomic,strong) IBOutlet UINavigationItem *titleBar;
 @property (nonatomic,strong) IBOutlet UIBarItem *BackBtn;
+@property (nonatomic,strong) IBOutlet UIBarItem *EditBtn;
 
 -(IBAction)performBackAction:(id)sender;
+-(IBAction)performEditAction:(id)sender;
 
 @end

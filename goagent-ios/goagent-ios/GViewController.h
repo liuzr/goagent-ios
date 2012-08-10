@@ -14,6 +14,7 @@
 @property (nonatomic,strong) IBOutlet UIBarItem *startBtn;
 @property (nonatomic,strong) IBOutlet UIBarItem *settingBtn;
 @property (nonatomic,strong) UIViewController* settingViewController;
+@property (nonatomic,strong) IBOutlet UIWebView* webViewRef;
 
 -(IBAction)performStartAction:(id)sender;
 -(IBAction)performSettingAction:(id)sender;

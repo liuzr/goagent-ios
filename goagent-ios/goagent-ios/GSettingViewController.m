@@ -26,24 +26,24 @@
 @end
 
 @implementation GSettingViewController
-@synthesize settingSections,settingDic,settingTableView,titleBar,BackBtn;
+@synthesize settingSections,settingDic,settingTableView,titleBar,BackBtn,EditBtn;
 
 -(void)awakeFromNib
 {
     NSMutableArray *keys = [[NSMutableArray alloc] init];
     NSMutableDictionary *contents = [[NSMutableDictionary alloc] init];
     
-    NSString *colorKey = @"Colors";
-    NSString *clothingKey = @"Clothing";
-    NSString *miscKey = @"Misc";
+    NSString *basicKey = @"Basic";
+    NSString *customKey = @"Custom URL";
+    NSString *advancedKey = @"Advanced";
     
-    [contents setObject:[NSArray arrayWithObjects:@"Red", @"Blue", nil] forKey:colorKey];
-    [contents setObject:[NSArray arrayWithObjects:@"Pants", @"Shirt", @"Socks", nil] forKey:clothingKey];
-    [contents setObject:[NSArray arrayWithObjects:@"Wankle Rotary Engine", nil] forKey:miscKey];
+    [contents setObject:[NSArray arrayWithObjects:@"Appid", @"GAE profile",@"PAC",nil] forKey:basicKey];
+    [contents setObject:[NSArray arrayWithObjects:@"Change System Proxy", nil] forKey:advancedKey];
+    [contents setObject:[NSArray arrayWithObjects:@"http://www.google.com", nil] forKey:customKey];
     
-    [keys addObject:clothingKey];
-    [keys addObject:miscKey];
-    [keys addObject:colorKey];
+    [keys addObject:basicKey];
+    [keys addObject:advancedKey];
+    [keys addObject:customKey];
     
     settingSections = keys;
     settingDic = contents;
@@ -120,6 +120,11 @@
 {
     NSLog(@"back button pushed");
     [self dismissModalViewControllerAnimated:YES];
+}
+
+-(IBAction)performEditAction:(id)sender
+{
+    NSLog(@"edit button pushed");
 }
 
 @end

@@ -55,9 +55,6 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
 }
 
 - (void)loadPlaceholderView {
-	// This should only be a placeholder - it should not connect to any servers or perform any intense
-	// data loading operations.
-	//
 	// All widgets are 316 points wide. Image size calculations match those of the Stocks widget.
 	_view = [[UIView alloc] initWithFrame:(CGRect){CGPointZero, {316.f, [self viewHeight]}}];
 	_view.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -75,7 +72,6 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
 	_view = nil;
 	[_backgroundView release];
 	_backgroundView = nil;
-	// Destroy any additional subviews you added here. Don't waste memory :(.
 }
 
 - (float)viewHeight {
@@ -87,11 +83,11 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
     NSLog(@"button.tag = %d",btn.tag);
     if (btn.tag == 1)
     {
-        system("sh /var/mobile/goagent-local/start_goagent.sh");
+        system("sh /Applications/goagent-ios.app/Contents/goagent-local/proxy.sh start");
     }
     else 
     {
-        system("sh /var/mobile/goagent-local/stop_goagent.sh");
+        system("sh /Applications/goagent-ios.app/Contents/goagent-local/proxy.sh stop");
     }
 }
 @end

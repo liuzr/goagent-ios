@@ -3,14 +3,16 @@
 # control script for goagent-local
 #
 start() {
-    cd $(dirname "$0")
+    touch /tmp/goagent.pid
+    
+    cd "$(dirname "$0")"
+    chmod +x ../python/bin/python
     export PYTHONHOME=../python
     ../python/bin/python goagent-daemon.py &
-    touch /tmp/goagent.pid
 }
 stop() {
-    killall python
-    rm -f /tmp/goagent.pid
+    killall python > /dev/null 2>/dev/null
+    rm -rf /tmp/goagent.pid
 }
 # See how we were called.
 case "$1" in

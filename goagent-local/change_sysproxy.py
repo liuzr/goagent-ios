@@ -20,7 +20,7 @@ HTTPS_PROXY_VALUE = '127.0.0.1'
 PROXY_TYPE_KEY    = 'HTTPProxyType'
 FTP_PASSIVE_KEY   = 'FTPPassive'
 
-BACKUP_PATH       = '/var/mobile/goagent-local/backup'
+BACKUP_PATH       = '/Applications/goagent-ios.app/Contents/goagent-local/backup'
 PREFERENCES_PLIST = '/Library/Preferences/SystemConfiguration/preferences.plist'
 
 def change(plistFile):

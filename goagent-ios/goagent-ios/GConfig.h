@@ -18,6 +18,7 @@
 #define CONTROL_CMD_START               @"start"
 #define CONTROL_CMD_STOP                @"stop"
 #define CONTROL_CMD_RESTART             @"restart"
+#define CHANGE_SYSPROXY_SCRIPT          @"change_sysproxy"
 
 #define KEY_SETTING_BASIC               @"Basic"
 #define KEY_SETTING_CUSTOM              @"Custom URL"
@@ -25,6 +26,6 @@
 #define KEY_SETTING_APPID               @"AppID"
 #define KEY_SETTING_PROFILE             @"GAE Profile"
 #define KEY_SETTING_PAC                 @"PAC Server"
-#define KEY_SETTING_SET_SYSPROXY        @"Set System Proxy"
+#define KEY_SETTING_SET_SYSPROXY        @"Change System Proxy"
 
 #endif

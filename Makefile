@@ -19,11 +19,11 @@ install: all
 		make -C $$i custom-install || exit 1; \
 	done
 
-package: install 
+package: 
 	echo "packaging $(DEB_NAME)"
 	dpkg -b $(PKG_ROOT) $(PKG_ROOT)/$(DEB_NAME)	
 
-deploy: package
+deploy: 
 	scp $(PKG_ROOT)/$(DEB_NAME) root\@$(DEVICE_IP):/
 clean:
 	@for i in $(APPS) ; do \

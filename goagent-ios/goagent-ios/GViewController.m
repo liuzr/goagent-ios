@@ -10,6 +10,7 @@
 #import "GSettingViewController.h"
 #import "NSTask.h"
 #import "GConfig.h"
+#import "3rdparty/ASIHTTPRequest/ASIHTTPRequest.h"
 
 @interface GViewController ()
 
@@ -58,8 +59,7 @@
     else
     {
         actionCmd = CONTROL_CMD_START;
-        NSURLRequest* urlReq = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://code.google.com/p/goagent"]];
-        [webViewRef loadRequest:urlReq];
+        [self loadHomePage];
     }
     
     NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -111,5 +111,19 @@
     if ([[NSFileManager defaultManager] fileExistsAtPath:GOAGENT_PID_PATH])
         return YES;
     else return NO;
+}
+
+-(void)loadHomePage
+{
+    ASIHTTPRequest __weak *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://code.google.com/p/goagent"]];
+    [request setProxyHost:@"127.0.0.1"];
+    [request setProxyPort:8087];
+    [request setProxyType:@"HTTP"];
+    [request setCompletionBlock:^
+    {
+        NSString *responseString = [request responseString];
+        [webViewRef loadHTMLString:responseString baseURL:nil];
+    }];
+    [request startAsynchronous];
 }
 @end

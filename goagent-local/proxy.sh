@@ -4,9 +4,7 @@
 #
 start() {
     touch /tmp/goagent.pid
-    
     cd "$(dirname "$0")"
-    chmod +x ../python/bin/python
     export PYTHONHOME=../python
     ../python/bin/python goagent-daemon.py &
 }

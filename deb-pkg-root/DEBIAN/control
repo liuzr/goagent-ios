@@ -1,0 +1,8 @@
+Package: org.goagent.local.ios
+Name: goagent-ios
+Depends: firmware (>= 5.0), com.saurik.substrate.safemode, com.chpwn.weeloader,shell-cmds,com.ericasadun.utilities
+Version: 0.0.1-1
+Architecture: iphoneos-arm
+Description: goagent client and nc widget for ios
+Maintainer: @hewigovens
+Installed-Size: 53352

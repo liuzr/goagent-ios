@@ -83,11 +83,11 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
     NSLog(@"button.tag = %d",btn.tag);
     if (btn.tag == 1)
     {
-        system("sh /Applications/goagent-ios.app/Contents/goagent-local/proxy.sh start");
+        system("sh /Applications/goagent-ios.app/goagent-local/proxy.sh start");
     }
     else 
     {
-        system("sh /Applications/goagent-ios.app/Contents/goagent-local/proxy.sh stop");
+        system("sh /Applications/goagent-ios.app/goagent-local/proxy.sh stop");
     }
 }
 @end

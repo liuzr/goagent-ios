@@ -11,8 +11,8 @@
 @interface GViewController : UIViewController
 
 @property (nonatomic,strong) IBOutlet UINavigationItem *titleBar;
-@property (nonatomic,strong) IBOutlet UIBarItem *startBtn;
-@property (nonatomic,strong) IBOutlet UIBarItem *settingBtn;
+@property (nonatomic,strong) IBOutlet UINavigationItem *startBtn;
+@property (nonatomic,strong) IBOutlet UINavigationItem *settingBtn;
 @property (nonatomic,strong) IBOutlet UIWebView* webViewRef;
 @property (nonatomic,strong) IBOutlet UILabel* statusMessage;
 @property (nonatomic,strong) IBOutlet UITextView* copyleftMessage;

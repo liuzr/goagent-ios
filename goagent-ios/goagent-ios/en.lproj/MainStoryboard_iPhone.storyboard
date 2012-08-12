@@ -158,8 +158,9 @@
             <relationships>
                 <relationship kind="action" name="performSettingAction:"/>
                 <relationship kind="action" name="performStartAction:"/>
-                <relationship kind="outlet" name="settingBtn" candidateClass="UIBarItem"/>
-                <relationship kind="outlet" name="startBtn" candidateClass="UIBarItem"/>
+                <relationship kind="outlet" name="copyleftMessage" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="settingBtn" candidateClass="UINavigationItem"/>
+                <relationship kind="outlet" name="startBtn" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="statusMessage" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="titleBar" candidateClass="UINavigationItem"/>
                 <relationship kind="outlet" name="webViewRef" candidateClass="UIWebView"/>

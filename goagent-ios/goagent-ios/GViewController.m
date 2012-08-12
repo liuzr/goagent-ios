@@ -19,6 +19,10 @@
 
 @synthesize titleBar,startBtn,settingBtn,settingViewController,webViewRef,statusMessage,copyleftMessage;
 
+- (void)viewDidUnload
+{
+    [super viewDidUnload];
+}
 
 -(void)awakeFromNib
 {
@@ -28,18 +32,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([self isRunning])
-    {
-        [statusMessage setText:[NSString stringWithFormat:@"GoAgent is Runing"]];
-    }
-    else [statusMessage setText:[NSString stringWithFormat:@"GoAgent is Stopped"]];
-    [self updateStartBtnTitle];
-    [self.webViewRef setHidden:YES];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+    
+    [webViewRef setHidden:YES];
+    [self updateUIStatus];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -63,6 +58,8 @@
     else
     {
         actionCmd = CONTROL_CMD_START;
+        NSURLRequest* urlReq = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://code.google.com/p/goagent"]];
+        [webViewRef loadRequest:urlReq];
     }
     
     NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -76,13 +73,9 @@
     [task setArguments:[NSArray arrayWithObjects:controlSh,actionCmd,nil]];
     [task setCurrentDirectoryPath:workingDir];
     [task launch];
+    [task waitUntilExit];
     
-    [self updateStartBtnTitle];
-    [webViewRef setHidden:NO];
-    [statusMessage setHidden:YES];
-    [copyleftMessage setHidden:YES];
-    NSURL* url = [[NSURL alloc] initWithString:@"https://code.google.com/p/goagent"];
-    [webViewRef loadRequest:[[NSURLRequest alloc] initWithURL:url]];
+    [self updateUIStatus];
 }
 
 -(IBAction)performSettingAction:(id)sender
@@ -91,11 +84,26 @@
     [self presentModalViewController:settingViewController animated:NO];
 }
 
--(void)updateStartBtnTitle;
+-(void)updateUIStatus;
 {
     if ([self isRunning])
-        startBtn.title = @"Stop";
-    else startBtn.title = @"Start";
+    {
+        [startBtn setTitle:@"Stop"];
+        [statusMessage setText:[NSString stringWithFormat:@"GoAgent is Runing"]];
+        
+        [webViewRef setHidden:NO];
+        [statusMessage setHidden:YES];
+        [copyleftMessage setHidden:YES];
+    }
+    else
+    {
+        [startBtn setTitle:@"Start"];
+        [statusMessage setText:[NSString stringWithFormat:@"GoAgent is Stopped"]];
+        
+        [webViewRef setHidden:YES];
+        [statusMessage setHidden:NO];
+        [copyleftMessage setHidden:NO];
+    }
 }
 
 -(BOOL)isRunning

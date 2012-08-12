@@ -20,11 +20,19 @@ clean:
 	$(XCODEBUILD) -project $(PROJECT) -configuration $(CONFIGURATION) -target $$i clean; \
 	done
 
-.PHONY: custom-install
-custom-install: $(TARGETS)
+.PHONY: install
+install: $(TARGETS)
 	@for i in $(TARGETS); do \
 	echo "*** installing $$i"; \
 	$(XCODEBUILD) DSTROOT=$(DSTROOT) -project $(PROJECT) -configuration $(CONFIGURATION) -target $$i install; \
+	done
+
+.PHONY: custom-install
+custom-install: 
+	@for i in $(TARGETS); do \
+	echo "*** installing $$i"; \
+	mkdir -p $(DSTROOT)/Applications; \
+	cp -Rf build/$(CONFIGURATION)-iphoneos/$$i.app $(DSTROOT)/Applications/ ;\
 	done
 
 .PHONY: package

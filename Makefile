@@ -18,7 +18,7 @@ install:
 	done
 
 
-package: install
+package: install 
 	echo "packaging $(DEB_NAME)"
 	dpkg -b $(PKG_ROOT) $(PKG_ROOT)/$(DEB_NAME)	
 clean:

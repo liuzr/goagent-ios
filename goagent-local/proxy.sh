@@ -6,7 +6,7 @@ start() {
     touch /tmp/goagent.pid
     cd "$(dirname "$0")"
     export PYTHONHOME=../python
-    ../python/bin/python goagent-daemon.py &
+    ../python/bin/python proxy.py &
 }
 stop() {
     killall python > /dev/null 2>/dev/null

@@ -34,4 +34,4 @@ clean:
 	echo "cleaning $(PKG_ROOT)"
 	rm -Rf $(PKG_ROOT)/Applications
 	rm -Rf $(PKG_ROOT)/Library
-	rm -Rf $(PKG_ROOT)/$(DEB_NAME)
+	rm -Rf $(PKG_ROOT)/*.deb

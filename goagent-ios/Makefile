@@ -2,7 +2,7 @@ DSTROOT=../deb-pkg-root
 
 PROJECT=goagent-ios.xcodeproj
 TARGETS=goagent-ios
-XCODEBUILD=/usr/bin/xcodebuild 
+XCODEBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild 
 CONFIGURATION=Release
 
 .PHONY: all

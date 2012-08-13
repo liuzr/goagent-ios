@@ -1,7 +1,7 @@
 APPS = goagent-ios goagent-widget
 DEB_NAME = org.goagent.local.ios
 PKG_ROOT = deb-pkg-root
-DEVICE_IP=192.168.3.101
+DEVICE_IP=10.64.81.40
 VERSION = $(shell grep Version $(PKG_ROOT)/DEBIAN/control | cut -d ":" -f2 | tr -d " ")
 .PHONY : $(APPS)
 
@@ -24,7 +24,7 @@ package:
 	dpkg -b $(PKG_ROOT) $(PKG_ROOT)/$(DEB_NAME)_$(VERSION)_iphoneos-arm.deb	
 
 deploy: 
-	scp $(PKG_ROOT)/$(DEB_NAME) root\@$(DEVICE_IP):/
+	scp $(PKG_ROOT)/$(DEB_NAME)_$(VERSION)_iphoneos-arm.deb root\@$(DEVICE_IP):/
 clean:
 	@for i in $(APPS) ; do \
 		echo "cleaning $$i" ; \

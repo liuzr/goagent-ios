@@ -10,7 +10,6 @@
 #import "GSettingViewController.h"
 #import "NSTask.h"
 #import "GConfig.h"
-#import "3rdparty/ASIHTTPRequest/ASIHTTPRequest.h"
 
 @interface GViewController ()
 
@@ -59,7 +58,6 @@
     else
     {
         actionCmd = CONTROL_CMD_START;
-        [self loadHomePage];
     }
     
     NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -75,6 +73,9 @@
     [task launch];
     [task waitUntilExit];
     
+    if ([actionCmd isEqualToString:CONTROL_CMD_START]) {
+        [self loadHomePage];
+    }
     [self updateUIStatus];
 }
 
@@ -115,15 +116,34 @@
 
 -(void)loadHomePage
 {
-    ASIHTTPRequest __weak *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"https://code.google.com/p/goagent"]];
-    [request setProxyHost:@"127.0.0.1"];
-    [request setProxyPort:8087];
-    [request setProxyType:@"HTTP"];
-    [request setCompletionBlock:^
+    NSURL* url = [NSURL URLWithString:@"http://code.google.com/p/goagent"];
+    CFHTTPMessageRef request =  CFHTTPMessageCreateRequest(NULL, CFSTR("GET"), (__bridge CFURLRef)url, kCFHTTPVersion1_1);
+    CFReadStreamRef requestStream =  CFReadStreamCreateForHTTPRequest(NULL, request);
+    CFReadStreamSetProperty(requestStream, kCFStreamPropertyHTTPShouldAutoredirect, kCFBooleanTrue);
+    CFReadStreamSetProperty(requestStream, kCFProxyHostNameKey, @"127.0.0.1");
+    CFReadStreamSetProperty(requestStream, kCFProxyPortNumberKey, (__bridge CFNumberRef)([NSNumber numberWithInt:8087]));
+    CFReadStreamSetProperty(requestStream, kCFProxyTypeHTTP, kCFProxyTypeHTTP);
+    
+    NSMutableData *responseBytes = [NSMutableData data];
+    
+    if (CFReadStreamOpen(requestStream))
     {
-        NSString *responseString = [request responseString];
-        [webViewRef loadHTMLString:responseString baseURL:nil];
-    }];
-    [request startAsynchronous];
+        CFIndex numBytesRead = 0 ;
+        do
+        {
+            UInt8 buf[1024];
+            numBytesRead = CFReadStreamRead(requestStream, buf, sizeof(buf));
+            
+            
+            if(numBytesRead > 0)
+                [responseBytes appendBytes:buf length:numBytesRead];
+            
+            
+        } while(numBytesRead > 0);
+    }
+    [webViewRef loadData:responseBytes MIMEType:@"text/html" textEncodingName:@"utf-8" baseURL:nil];
+    CFReadStreamClose(requestStream);
+    CFRelease(requestStream);
+    CFRelease(request);
 }
 @end

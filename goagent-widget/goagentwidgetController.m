@@ -46,11 +46,10 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
         btnTitle = @"Start GoAgent";
         action = 1;
     }
-        
     [toggleBtn setTitle:btnTitle  forState:UIControlStateNormal];
     toggleBtn.tag = action;
     [toggleBtn addTarget:self action:@selector(runGoAgent:) forControlEvents:UIControlEventTouchDown];
-    toggleBtn.frame = CGRectMake(0, 0, 140, 40);
+    toggleBtn.frame = CGRectMake(_view.frame.size.width/2-70, 0, 140, 60);
 	[_view addSubview:toggleBtn];
 }
 
@@ -84,10 +83,12 @@ static NSBundle *_goagentwidgetWeeAppBundle = nil;
     if (btn.tag == 1)
     {
         system("sh /Applications/goagent-ios.app/goagent-local/proxy.sh start");
+        [btn setTitle:@"Stop GoAgent" forState:UIControlStateNormal];
     }
     else 
     {
         system("sh /Applications/goagent-ios.app/goagent-local/proxy.sh stop");
+        [btn setTitle:@"Start GoAgent" forState:UIControlStateNormal];
     }
 }
 @end

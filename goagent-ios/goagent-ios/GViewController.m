@@ -34,6 +34,10 @@
     [super viewDidLoad];
     
     [webViewRef setHidden:YES];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     [self updateUIStatus];
 }
 

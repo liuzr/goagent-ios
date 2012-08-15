@@ -1342,22 +1342,25 @@ class Sock5ProxyHandler(SocketServer.StreamRequestHandler):
         SocketServer.StreamRequestHandler.setup(self)
 
 class PacServerHandler(BaseHTTPServer.BaseHTTPRequestHandler):
-
     def do_GET(self):
-        filename = os.path.join(os.path.dirname(__file__), common.PAC_FILE)
-        if self.path != '/'+common.PAC_FILE or not os.path.isfile(filename):
+        filename = os.path.join(os.path.dirname(__file__), self.path.split('/')[1])
+        print filename,self.path
+        if (self.path !='/'+common.PAC_FILE and self.path!= '/CA.crt')or not os.path.isfile(filename):
             return self.send_error(404, 'Not Found')
         with open(filename, 'rb') as fp:
             data = fp.read()
             self.send_response(200)
-            self.send_header('Content-Type', 'application/x-ns-proxy-autoconfig')
+            if filename == common.PAC_FILE:
+                self.send_header('Content-Type', 'application/x-ns-proxy-autoconfig')
+            else:
+                self.send_header('Content-Type', 'application/octet-stream')
             self.end_headers()
             self.wfile.write(data)
             self.wfile.close()
 
 class ProxyAndPacHandler(GAEProxyHandler, PacServerHandler):
     def do_GET(self):
-        if self.path == '/'+common.PAC_FILE:
+        if self.path == '/'+common.PAC_FILE or self.path == '/CA.crt':
             PacServerHandler.do_GET(self)
         else:
             GAEProxyHandler.do_METHOD(self)

@@ -48,6 +48,7 @@ def change(plistFile):
 
     plistlib.writePlist(root,plistFile)
     os.system('plutil -convert binary1 %s' % plistFile)
+    os.system('killall configd')
 
 if __name__ == '__main__':
     change(PREFERENCES_PLIST)

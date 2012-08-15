@@ -2,4 +2,4 @@
 
 cd "`dirname $0`"
 export PYTHONHOME=../python
-../python/bin/python change_sysproxy.py
+echo $1 | sudo -S ../python/bin/python change_sysproxy.py

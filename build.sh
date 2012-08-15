@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make clean && make install && make package
+make clean && make install && make package && make deploy

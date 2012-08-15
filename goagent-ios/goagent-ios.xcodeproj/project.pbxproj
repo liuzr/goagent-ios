@@ -28,6 +28,7 @@
 		CE9128EC157B4171008C98B1 /* GViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9128EB157B4171008C98B1 /* GViewController.m */; };
 		CE912910157B43C2008C98B1 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = CE91290F157B43C2008C98B1 /* settings.png */; };
 		CE912963157B483F008C98B1 /* GSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE912962157B483F008C98B1 /* GSettingViewController.m */; };
+		CED3CDDD15DB374500FA4742 /* GUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CED3CDDC15DB374500FA4742 /* GUtility.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +64,8 @@
 		CE91290F157B43C2008C98B1 /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		CE912961157B483F008C98B1 /* GSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSettingViewController.h; sourceTree = "<group>"; };
 		CE912962157B483F008C98B1 /* GSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSettingViewController.m; sourceTree = "<group>"; };
+		CED3CDDB15DB374500FA4742 /* GUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GUtility.h; sourceTree = "<group>"; };
+		CED3CDDC15DB374500FA4742 /* GUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GUtility.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,14 +130,16 @@
 			isa = PBXGroup;
 			children = (
 				BBF04DAB15D3DC180000BD41 /* iniparser */,
-				CE33B66B15D4A4A300D00CF8 /* NSTask.h */,
 				BBEFC40A15D537F5000ADA28 /* GConfig.h */,
+				CE33B66B15D4A4A300D00CF8 /* NSTask.h */,
+				CED3CDDB15DB374500FA4742 /* GUtility.h */,
+				CED3CDDC15DB374500FA4742 /* GUtility.m */,
 				CE9128E1157B4171008C98B1 /* GAppDelegate.h */,
 				CE9128E2157B4171008C98B1 /* GAppDelegate.m */,
-				CE912961157B483F008C98B1 /* GSettingViewController.h */,
-				CE912962157B483F008C98B1 /* GSettingViewController.m */,
 				CE9128EA157B4171008C98B1 /* GViewController.h */,
 				CE9128EB157B4171008C98B1 /* GViewController.m */,
+				CE912961157B483F008C98B1 /* GSettingViewController.h */,
+				CE912962157B483F008C98B1 /* GSettingViewController.m */,
 				CE91290E157B4382008C98B1 /* resources */,
 				CE9128D9157B4171008C98B1 /* Supporting Files */,
 			);
@@ -246,6 +251,7 @@
 				CE912963157B483F008C98B1 /* GSettingViewController.m in Sources */,
 				BBF04DB315D3DC180000BD41 /* dictionary.c in Sources */,
 				BBF04DB415D3DC180000BD41 /* iniparser.c in Sources */,
+				CED3CDDD15DB374500FA4742 /* GUtility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -3,13 +3,13 @@
 //  goagent-ios
 //
 //  Created by hewig on 6/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 goagent project. All rights reserved.
 //
 
 #import "GViewController.h"
 #import "GSettingViewController.h"
-#import "NSTask.h"
 #import "GConfig.h"
+#import "GUtility.h"
 
 @interface GViewController ()
 
@@ -60,18 +60,10 @@
         actionCmd = CONTROL_CMD_START;
     }
     
-    NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* controlSh = [[NSBundle mainBundle] pathForResource:CONTROL_SCRIPT_NAME
                                                           ofType:CONTROL_SCRIPT_TYPE
                                                      inDirectory:GOAGENT_LOCAL_PATH];
-    NSLog(@"controlSh path is %@",controlSh);
-    
-    NSTask* task = [NSTask alloc];
-    [task setLaunchPath:@"/bin/bash"];
-    [task setArguments:[NSArray arrayWithObjects:controlSh,actionCmd,nil]];
-    [task setCurrentDirectoryPath:workingDir];
-    [task launch];
-    [task waitUntilExit];
+    [GUtility runTaskWithArgs:[NSArray arrayWithObjects:controlSh,actionCmd,nil] waitExit:YES];
     
     if ([actionCmd isEqualToString:CONTROL_CMD_START]) {
         [self loadHomePage];

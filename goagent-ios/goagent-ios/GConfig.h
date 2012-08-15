@@ -3,7 +3,7 @@
 //  goagent-ios
 //
 //  Created by hewig on 8/10/12.
-//
+//  Copyright (c) 2012 goagent project. All rights reserved.
 //
 
 #ifndef goagent_ios_GConfig_h
@@ -27,5 +27,8 @@
 #define KEY_SETTING_PROFILE             @"GAE Profile"
 #define KEY_SETTING_PAC                 @"PAC Server"
 #define KEY_SETTING_SET_SYSPROXY        @"Change System Proxy"
+#define KEY_SETTING_INSTALL_CERT        @"Install GoAgent CA"
+
+#define APPLICATION_NAME                @"GoAgent for iOS"
 
 #endif

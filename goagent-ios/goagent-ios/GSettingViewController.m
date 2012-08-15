@@ -3,12 +3,12 @@
 //  goagent-ios
 //
 //  Created by hewig on 6/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 goagent project. All rights reserved.
 //
 
 #import "GSettingViewController.h"
 #import "GConfig.h"
-#import "NSTask.h"
+#import "GUtility.h"
 
 @implementation GSettingViewController
 @synthesize settingSections,settingDic,settingTableView,titleBar,BackBtn,EditBtn,docInteractionController;
@@ -105,6 +105,7 @@
 {
     int textTag = [textField tag];
     int section=0,row=0;
+    
     row = textTag % 10;
     while (textTag)
     {
@@ -124,7 +125,8 @@
     
     [item setValue:[textField text] forKey:[NSString stringWithFormat:@"%@_%d_value",key,row]];
     char *iniKey = NULL;
-    switch ([textField tag]) {
+    switch ([textField tag])
+    {
         case 10:
             iniKey="gae:appid";
             break;
@@ -217,7 +219,13 @@
                                         [NSArray arrayWithObjects:[NSString stringWithFormat:@"%@_0_key",KEY_SETTING_ADVANCED], [NSString stringWithFormat:@"%@_0_value",KEY_SETTING_ADVANCED],nil]
                                  ];
     
-    NSArray* advancedArray = [NSArray arrayWithObject:sysproxyDic];
+    NSMutableDictionary* installCertDic = [NSMutableDictionary dictionaryWithObjects:
+                                        [NSArray arrayWithObjects:KEY_SETTING_INSTALL_CERT,KEY_SETTING_INSTALL_CERT,nil]
+                                                                          forKeys:
+                                        [NSArray arrayWithObjects:[NSString stringWithFormat:@"%@_1_key",KEY_SETTING_ADVANCED], [NSString stringWithFormat:@"%@_1_value",KEY_SETTING_ADVANCED],nil]
+                                        ];
+    
+    NSArray* advancedArray = [NSArray arrayWithObjects:sysproxyDic,installCertDic,nil];
     
     [self.settingDic setObject:advancedArray forKey:KEY_SETTING_ADVANCED];
     
@@ -247,7 +255,7 @@
                                                              animated:YES])
         {
             UIAlertView* alert = [[UIAlertView alloc] init];
-            [alert setTitle:@"GoAgent for iOS"];
+            [alert setTitle:APPLICATION_NAME];
             [alert setMessage:[NSString stringWithFormat:@"Sorry, No other App can edit %@.%@",CONFIG_FILE_NAME,CONFIG_FILE_TYPE]];
             [alert addButtonWithTitle:@"OK"];
             [alert show];
@@ -257,16 +265,47 @@
 
 -(void)performPressAciton:(id)sender
 {
-    NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    NSString* changeSh = [[NSBundle mainBundle] pathForResource:CHANGE_SYSPROXY_SCRIPT
-                                                          ofType:CONTROL_SCRIPT_TYPE
-                                                     inDirectory:GOAGENT_LOCAL_PATH];
-    
-    NSTask* task = [NSTask alloc];
-    [task setLaunchPath:@"/bin/bash"];
-    [task setArguments:[NSArray arrayWithObject:changeSh]];
-    [task setCurrentDirectoryPath:workingDir];
-    [task launch];
+    UIButton* button = (UIButton*)sender;
+    switch (button.tag)
+    {
+        //change proxy
+        case 100:
+        {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:APPLICATION_NAME
+                                                             message:@"Type your password to allow changing system proxy"
+                                                            delegate:self
+                                                   cancelButtonTitle:@"Cancel"
+                                                   otherButtonTitles:@"OK",nil];
+            
+            alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+            UITextField * alertTextField = [alert textFieldAtIndex:0];
+            alertTextField.keyboardType = UIKeyboardTypeDefault;
+            alertTextField.secureTextEntry = YES;
+            alertTextField.placeholder = @"Your password";
+            [alert show];
+            
+            break;
+        }
+        //install cert
+        case 101:
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://127.0.0.1:8089/CA.crt"]];
+            break;
+        default:
+            break;
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+
+    //Ok button
+    if (buttonIndex == 1)
+    {
+        NSString* changeSh = [[NSBundle mainBundle] pathForResource:CHANGE_SYSPROXY_SCRIPT
+                                                             ofType:CONTROL_SCRIPT_TYPE
+                                                        inDirectory:GOAGENT_LOCAL_PATH];
+        [GUtility runTaskWithArgs:[NSArray arrayWithObjects:changeSh,[[alertView textFieldAtIndex:0] text],nil] waitExit:NO];
+    }
 }
 
 @end

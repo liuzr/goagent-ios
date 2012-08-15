@@ -3,7 +3,7 @@
 //  goagent-ios
 //
 //  Created by hewig on 6/3/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 goagent project. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,7 +12,8 @@
 @interface GSettingViewController : UIViewController<UITableViewDelegate,
                                                     UITableViewDataSource,
                                                     UITextFieldDelegate,
-                                                    UIDocumentInteractionControllerDelegate>
+                                                    UIDocumentInteractionControllerDelegate,
+                                                    UIAlertViewDelegate>
 {
     dictionary* iniDic;
 }

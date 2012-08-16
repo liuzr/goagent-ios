@@ -1,2 +1,12 @@
 #!/bin/bash
-echo "preinst"
+PROXY_CONFIG=/Applications/goagent-ios.app/goagent-local/proxy.ini
+BACKUP_CONFIG=/tmp/proxy.ini.bak
+
+if [ -e "$PROXY_CONFIG" ];then 
+    echo "stop goagent"
+    killall python > /dev/null 2>/dev/null
+    rm -rf /tmp/goagent.pid
+
+    echo "backup proxy.ini"
+    cp -f "$PROXY_CONFIG" "$BACKUP_CONFIG"
+fi

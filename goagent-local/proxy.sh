@@ -2,11 +2,12 @@
 #
 # control script for goagent-local
 #
+DBGLOG=/tmp/goagent.log
 start() {
     touch /tmp/goagent.pid
     cd "$(dirname "$0")"
     export PYTHONHOME=../python
-    ../python/bin/python proxy.py &
+    ../python/bin/python proxy.py >$DBGLOG  2>$DBGLOG &
 }
 stop() {
     killall python > /dev/null 2>/dev/null

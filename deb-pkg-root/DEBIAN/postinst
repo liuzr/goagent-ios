@@ -1,8 +1,22 @@
 #!/bin/bash
 
+PROXY_CONFIG=/Applications/goagent-ios.app/goagent-local/proxy.ini
+RESTORE_PY=/Applications/goagent-ios.app/goagent-local/restore_setting.py
+BACKUP_CONFIG=/tmp/proxy.ini.bak
+export PYTHONHOME=/Applications/goagent-ios.app/python
+
 function change_permissions()
 {
     chown -R mobile:staff /Applications/goagent-ios.app 
 }
 
+function try_restore_setting()
+{
+    if [ -e "$BACKUP_CONFIG" ];then
+        echo "restore proxy.ini"
+        "$PYTHONHOME/bin/python" "$RESTORE_PY" "$BACKUP_CONFIG"
+    fi
+}
+
 change_permissions
+try_restore_setting

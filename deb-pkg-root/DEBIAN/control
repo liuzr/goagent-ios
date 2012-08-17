@@ -1,6 +1,6 @@
 Package: org.goagent.local.ios
 Name: goagent-ios
-Depends: firmware (>= 5.0), com.saurik.substrate.safemode, com.chpwn.weeloader,sudo,shell-cmds,com.ericasadun.utilities
+Depends: firmware (>= 5.0), com.saurik.substrate.safemode, com.chpwn.weeloader,openssl,sudo,shell-cmds,com.ericasadun.utilities
 Version: 0.0.3-1
 Architecture: iphoneos-arm
 Description: goagent client and nc widget for ios

@@ -14,7 +14,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    freopen("/tmp/goagent-ios.log","a",stderr);
+    NSLog(@"redirect logs to file");
     return YES;
 }
 							

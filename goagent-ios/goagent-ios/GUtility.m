@@ -19,15 +19,23 @@
     }
     NSString* workingDir = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     
-    NSTask* task = [NSTask alloc];
-    [task setLaunchPath:@"/bin/bash"];
-    [task setArguments:args];
-    [task setCurrentDirectoryPath:workingDir];
-    [task launch];
-    if (waitExit)
+    @try
     {
-        [task waitUntilExit];
+        NSTask* task = [NSTask alloc];
+        [task setLaunchPath:@"/bin/sh"];
+        [task setArguments:args];
+        [task setCurrentDirectoryPath:workingDir];
+        [task launch];
+        if (waitExit)
+        {
+            [task waitUntilExit];
+        }
     }
+    @catch (NSException *exception) {
+        NSLog(@"NSTask error occured, exception is %@, args is %@",exception,args);
+        return NO;
+    }
+
     return YES;
 }
 

@@ -1402,11 +1402,12 @@ def main():
         if not common.LISTEN_VISIBLE:
             ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
     if common.GAE_APPIDS[0] == 'goagent' and not common.CRLF_ENABLE:
-        logging.critical('please edit %s to add your appid to [gae] !', __config__)
+        sys.stderr.write('please edit %s to add your appid to [gae] !\n' % __config__)
+        os.system("rm -rf /tmp/goagent.pid")
         sys.exit(-1)
     CertUtil.check_ca()
     common.install_opener()
-    sys.stdout.write(common.info())
+    sys.stderr.write(common.info())
 
     LocalProxyServer.address_family = (socket.AF_INET, socket.AF_INET6)[':' in common.LISTEN_IP]
 

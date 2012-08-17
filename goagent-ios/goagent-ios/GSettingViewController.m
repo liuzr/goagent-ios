@@ -235,6 +235,7 @@
 
 -(IBAction)performBackAction:(id)sender
 {
+    NSLog(@"back to main view");
     [self dismissModalViewControllerAnimated:YES];
 }
 
@@ -271,6 +272,8 @@
         //change proxy
         case 100:
         {
+            NSLog(@"perform change system proxy action");
+            
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:APPLICATION_NAME
                                                              message:@"Type your password to allow changing system proxy"
                                                             delegate:self
@@ -288,8 +291,20 @@
         }
         //install cert
         case 101:
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://127.0.0.1:8089/CA.crt"]];
+        {
+            NSLog(@"perform install CA action");
+            NSString* CA_URL=nil;
+            if ([[NSFileManager defaultManager] fileExistsAtPath:GOAGENT_PID_PATH])
+            {
+                CA_URL = @"http://127.0.0.1:8089/CA.crt";
+            }
+            else
+            {
+                CA_URL = @"http://goagent.googlecode.com/files/CA.crt";
+            }
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:CA_URL]];
             break;
+        }
         default:
             break;
     }
